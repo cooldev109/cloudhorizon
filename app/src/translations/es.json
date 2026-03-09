@@ -1,0 +1,336 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "googleCloud": "Google Cloud",
+    "aws": "AWS",
+    "about": "Nosotros",
+    "partners": "Socios",
+    "contact": "Contacto",
+    "getQuote": "Cotizar"
+  },
+  "hero": {
+    "headline": "Tu Nube. Nuestra Experiencia.",
+    "subheadline": "Ayudamos a las empresas a migrar, optimizar y escalar en Google Cloud y AWS. Como socios certificados en la nube, ofrecemos soluciones empresariales con la seguridad como prioridad.",
+    "cta1": "Consulta Gratuita",
+    "cta2": "Explorar Servicios",
+    "partnerBadge1": "Socio de Google Cloud",
+    "partnerBadge2": "Socio de AWS"
+  },
+  "trust": {
+    "label": "Empresas innovadoras confian en nosotros",
+    "metric1": "Socio de Google Cloud",
+    "metric2": "Certificado AWS",
+    "metric3": "50+ Proyectos Entregados",
+    "metric4": "Soporte 24/7"
+  },
+  "services": {
+    "title": "Que Hacemos",
+    "subtitle": "Soluciones cloud de principio a fin adaptadas a tu negocio",
+    "tabs": {
+      "migration": {
+        "title": "Migracion Cloud",
+        "description": "Migre sus cargas de trabajo a Google Cloud o AWS sin tiempo de inactividad. Gestionamos la evaluacion, planificacion, ejecucion y validacion para garantizar una transicion fluida.",
+        "cta": "Inicie Su Migracion"
+      },
+      "infrastructure": {
+        "title": "Infraestructura Cloud",
+        "description": "Disene e implemente infraestructura cloud escalable y resiliente. Desde maquinas virtuales hasta clusters de Kubernetes, disenamos soluciones que crecen con su negocio.",
+        "cta": "Construya Su Infraestructura"
+      },
+      "devops": {
+        "title": "DevOps & CI/CD",
+        "description": "Acelere su ciclo de desarrollo con pipelines automatizados, contenedores e infraestructura como codigo. Despliegue mas rapido, con menos errores.",
+        "cta": "Automatice Su Pipeline"
+      },
+      "security": {
+        "title": "Ciberseguridad",
+        "description": "Proteja sus activos digitales con soluciones de seguridad integrales. Desde la deteccion de amenazas hasta el cumplimiento normativo, mantenemos su entorno cloud seguro.",
+        "cta": "Asegure Su Nube"
+      },
+      "ai": {
+        "title": "IA y Aprendizaje Automatico",
+        "description": "Aproveche el poder de la IA y el aprendizaje automatico en Google Cloud y AWS. Desde analisis de datos hasta modelos predictivos, transformamos sus datos en conocimiento.",
+        "cta": "Explorar Soluciones de IA"
+      },
+      "managed": {
+        "title": "Servicios Administrados",
+        "description": "Permita que gestionemos su entorno cloud para que usted se enfoque en su negocio. Monitoreo, optimizacion y soporte 24/7.",
+        "cta": "Obtenga Soporte Administrado"
+      }
+    }
+  },
+  "googleCloud": {
+    "badge": "Socio de Google Cloud",
+    "title": "Soluciones de Google Cloud",
+    "description": "Como Socio de Google Cloud, aportamos experiencia certificada a cada proyecto. Desde Compute Engine hasta BigQuery, le ayudamos a aprovechar todo el poder de la plataforma cloud de Google.",
+    "cta": "Explorar Servicios de Google Cloud",
+    "services": {
+      "compute": { "name": "Compute Engine", "desc": "Maquinas virtuales escalables para cualquier carga" },
+      "gke": { "name": "Google Kubernetes Engine", "desc": "Kubernetes administrado para apps en contenedores" },
+      "bigquery": { "name": "BigQuery", "desc": "Data warehouse serverless para analitica" },
+      "cloudrun": { "name": "Cloud Run", "desc": "Plataforma serverless completamente administrada" },
+      "storage": { "name": "Cloud Storage", "desc": "Almacenamiento de objetos seguro y duradero" },
+      "aiplatform": { "name": "Cloud AI Platform", "desc": "Herramientas de ML y modelos pre-entrenados" }
+    }
+  },
+  "aws": {
+    "badge": "Socio de AWS",
+    "title": "Soluciones de Amazon Web Services",
+    "description": "Ofrecemos soluciones integrales de AWS para impulsar su transformacion digital. Desde computo hasta IA, disenamos y administramos su entorno AWS para el maximo rendimiento.",
+    "cta": "Explorar Servicios de AWS",
+    "services": {
+      "ec2": { "name": "Amazon EC2", "desc": "Capacidad de computo segura y escalable" },
+      "lambda": { "name": "AWS Lambda", "desc": "Ejecute codigo sin preocuparse por servidores" },
+      "s3": { "name": "Amazon S3", "desc": "Almacenamiento escalable en la nube" },
+      "rds": { "name": "Amazon RDS", "desc": "Servicio de base de datos relacional administrado" },
+      "eks": { "name": "Amazon EKS", "desc": "Kubernetes administrado en AWS" },
+      "sagemaker": { "name": "Amazon SageMaker", "desc": "Construya, entrene y despliegue modelos de ML" }
+    }
+  },
+  "howWeWork": {
+    "title": "Como Trabajamos",
+    "subtitle": "Una metodologia probada para el exito en la nube",
+    "steps": {
+      "discovery": {
+        "title": "Descubrimiento",
+        "description": "Auditamos su infraestructura actual, identificamos puntos de dolor y definimos sus objetivos cloud. A traves de entrevistas y evaluaciones tecnicas, construimos una imagen completa de sus necesidades."
+      },
+      "architecture": {
+        "title": "Arquitectura",
+        "description": "Disenamos su solucion cloud con diagramas de arquitectura detallados, hojas de ruta de migracion y marcos de seguridad. Cada solucion se adapta a sus requisitos y presupuesto."
+      },
+      "implementation": {
+        "title": "Implementacion",
+        "description": "Ejecutamos la migracion y el despliegue con minima interrupcion. Nuestro equipo gestiona el aprovisionamiento de infraestructura, migracion de datos, pruebas y validacion."
+      },
+      "optimize": {
+        "title": "Optimizar y Escalar",
+        "description": "Monitoreamos continuamente, optimizamos costos y escalamos su entorno cloud. Con soporte 24/7 y gestion proactiva, su infraestructura se mantiene eficiente y rentable."
+      }
+    }
+  },
+  "whyUs": {
+    "title": "Por Que Elegir CloudsHorizon?",
+    "cards": {
+      "expertise": {
+        "metric": "Expertos Certificados",
+        "description": "Nuestro equipo posee certificaciones en Google Cloud y AWS, aportando profunda experiencia a cada proyecto."
+      },
+      "customization": {
+        "metric": "Soluciones a Medida",
+        "description": "Sin soluciones genericas. Cada solucion esta disenada a medida para cumplir sus necesidades y objetivos de negocio."
+      },
+      "security": {
+        "metric": "Seguridad Empresarial",
+        "description": "Implementamos medidas de seguridad lideres en la industria y marcos de cumplimiento para proteger sus datos y operaciones."
+      },
+      "support": {
+        "metric": "Soporte 24/7",
+        "description": "No solo construimos y nos vamos. Nuestro equipo proporciona monitoreo continuo, optimizacion y soporte tecnico."
+      }
+    }
+  },
+  "cta": {
+    "title": "Listo para Transformar su Viaje a la Nube?",
+    "subtitle": "Hablemos sobre como podemos ayudar a su empresa a aprovechar todo el poder del cloud computing.",
+    "button1": "Agendar una Consulta",
+    "button2": "Llamenos: +1 904-830-8747"
+  },
+  "contact": {
+    "title": "Contactenos",
+    "subtitle": "Tiene un proyecto en mente? Hablemos sobre como podemos ayudar.",
+    "form": {
+      "name": "Nombre Completo",
+      "email": "Correo Electronico",
+      "company": "Empresa",
+      "phone": "Telefono (opcional)",
+      "service": "Servicio de Interes",
+      "serviceOptions": {
+        "migration": "Migracion Cloud",
+        "infrastructure": "Infraestructura Cloud",
+        "devops": "DevOps & CI/CD",
+        "security": "Ciberseguridad",
+        "ai": "IA y Aprendizaje Automatico",
+        "managed": "Servicios Administrados",
+        "other": "Otro"
+      },
+      "message": "Mensaje",
+      "submit": "Enviar Mensaje"
+    },
+    "info": {
+      "phone": "+1 904-830-8747",
+      "whatsapp": "+57 321 636 3814",
+      "email": "amazabael@cloudshorizon.com",
+      "location": "Estados Unidos / Colombia"
+    }
+  },
+  "footer": {
+    "description": "CloudsHorizon es una firma innovadora de consultoria IT cloud especializada en soluciones de Google Cloud y AWS. Ayudamos a las empresas a migrar, optimizar y escalar en la nube.",
+    "servicesTitle": "Servicios",
+    "companyTitle": "Empresa",
+    "connectTitle": "Conectar",
+    "services": {
+      "migration": "Migracion Cloud",
+      "infrastructure": "Infraestructura Cloud",
+      "devops": "DevOps & CI/CD",
+      "security": "Ciberseguridad",
+      "ai": "IA y Aprendizaje Automatico",
+      "managed": "Servicios Administrados"
+    },
+    "company": {
+      "about": "Nosotros",
+      "partners": "Socios",
+      "contact": "Contacto",
+      "careers": "Carreras"
+    },
+    "copyright": "2026 CloudsHorizon Consulting. Todos los derechos reservados.",
+    "privacy": "Politica de Privacidad",
+    "terms": "Terminos de Servicio"
+  },
+  "workspace": {
+    "nav": "Google Workspace",
+    "title": "Planes Google Workspace",
+    "subtitle": "Comienza a trabajar en la nube con todas las aplicaciones colaborativas de Google. Elige el plan que mejor se adapte a tu empresa.",
+    "formerly": "antes G Suite",
+    "description": "Gracias a los planes Google Workspace podras contar con un entorno facil, flexible y colaborativo. Correo profesional, videoconferencias, almacenamiento en la nube y mucho mas — todo integrado y seguro.",
+    "requestTrial": "Solicitar Prueba Gratuita",
+    "hirePlan": "Contratar",
+    "contactAdvisor": "No sabes que plan elegir? Contactanos",
+    "perMonth": "/usuario/mes",
+    "startingFrom": "Desde",
+    "contactUs": "Contactanos",
+    "plans": {
+      "starter": {
+        "name": "Business Starter",
+        "price": "$7",
+        "features": [
+          "Correo profesional con dominio personalizado",
+          "Videollamadas Google Meet hasta 100 participantes",
+          "30 GB de almacenamiento en la nube por usuario",
+          "Controles de seguridad y administracion",
+          "Complemento Google Gemini AI disponible"
+        ]
+      },
+      "standard": {
+        "name": "Business Standard",
+        "price": "$14",
+        "features": [
+          "Correo profesional con dominio personalizado",
+          "Videollamadas Google Meet hasta 150 participantes + grabacion",
+          "2 TB de almacenamiento en la nube por usuario",
+          "Controles de seguridad mejorados",
+          "Complemento Google Gemini AI disponible"
+        ]
+      },
+      "plus": {
+        "name": "Business Plus",
+        "price": "$22",
+        "features": [
+          "Correo profesional con eDiscovery y retencion",
+          "Google Meet hasta 500 participantes + grabacion + seguimiento de asistencia",
+          "5 TB de almacenamiento en la nube por usuario",
+          "Seguridad avanzada, Vault, gestion de endpoints",
+          "Complemento Google Gemini AI disponible"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Personalizado",
+        "features": [
+          "Correo profesional con encriptacion S/MIME",
+          "Google Meet hasta 1,000 participantes + transmision en vivo",
+          "5 TB+ almacenamiento ampliable por usuario",
+          "Seguridad avanzada, DLP, regiones de datos, Vault",
+          "Complemento Google Gemini AI disponible"
+        ]
+      }
+    },
+    "exclusive": {
+      "title": "Beneficios Exclusivos CloudsHorizon",
+      "items": [
+        "Capacitacion de administrador incluida",
+        "Migracion de cuenta y datos administrada",
+        "Equipo de soporte dedicado",
+        "Soporte premium disponible"
+      ]
+    },
+    "apps": {
+      "title": "Aplicaciones Incluidas",
+      "gmail": {
+        "name": "Gmail",
+        "desc": "Correo profesional para tu empresa. 100% seguro, integrado con todas las apps de Workspace."
+      },
+      "calendar": {
+        "name": "Google Calendar",
+        "desc": "Disenado para la colaboracion en equipo. Programa reuniones y accede desde cualquier dispositivo."
+      },
+      "drive": {
+        "name": "Google Drive",
+        "desc": "Accede, almacena y comparte archivos de forma segura desde un solo lugar."
+      },
+      "meet": {
+        "name": "Google Meet",
+        "desc": "Videoconferencias de nivel empresarial integradas en la infraestructura segura de Google."
+      },
+      "admin": {
+        "name": "Consola de Administracion",
+        "desc": "Agrega usuarios, administra dispositivos y configura la seguridad — todo desde un solo lugar."
+      }
+    },
+    "whyWorkspace": {
+      "title": "Por Que Tu Empresa Necesita Google Workspace",
+      "stats": {
+        "revenue": { "value": "1.5%", "label": "aumento promedio de ingresos" },
+        "roi": { "value": "331%", "label": "retorno de inversion" },
+        "gdpr": { "value": "95%", "label": "reduccion de riesgo de cumplimiento" },
+        "tickets": { "value": "20%", "label": "menos tickets de soporte" }
+      },
+      "benefits": [
+        "Correo profesional con el dominio de tu empresa",
+        "Seguridad y cumplimiento de nivel empresarial",
+        "Colaboracion en equipo en tiempo real",
+        "Infraestructura cloud — trabaja desde cualquier lugar"
+      ]
+    },
+    "whyPartner": {
+      "title": "Por Que Trabajar con un Partner de Google Cloud?",
+      "items": [
+        "Consultoria personalizada segun tu industria y necesidades",
+        "Migracion administrada desde tu plataforma actual — sin perdida de datos",
+        "Expertos en Google Workspace disponibles para onboarding y capacitacion",
+        "Capacitacion y soporte incluidos en el primer ano",
+        "Acceso a precios y promociones exclusivas de partner"
+      ]
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "Que es un dominio y como lo obtengo?",
+          "a": "Necesitas un dominio para correo profesional (ej: tu@empresa.com). Puedes comprar uno tu mismo o nosotros lo gestionamos por ti."
+        },
+        {
+          "q": "Que es una licencia/usuario?",
+          "a": "Cada empleado que use Google Workspace necesita su propia licencia. El numero de licencias determina tu costo mensual."
+        },
+        {
+          "q": "Que plan de Workspace necesito?",
+          "a": "Depende de las necesidades de tu empresa — almacenamiento, capacidad de videoconferencia y requisitos de seguridad. Contactanos para una consulta gratuita."
+        },
+        {
+          "q": "Puedo migrar datos desde mi proveedor actual de correo?",
+          "a": "Si! Gestionamos el proceso completo de migracion desde cualquier plataforma (Microsoft 365, Yahoo, etc.) a Google Workspace sin perdida de datos."
+        },
+        {
+          "q": "Los planes se facturan mensual o anualmente?",
+          "a": "Google Workspace puede pagarse mensual o anualmente. Los planes anuales ofrecen mejores precios. Ambos requieren compromiso anual."
+        },
+        {
+          "q": "Hay prueba gratuita disponible?",
+          "a": "Si, Google ofrece una prueba gratuita de 14 dias para todos los planes Business. Contactanos para configurar tu prueba."
+        }
+      ]
+    }
+  }
+}
