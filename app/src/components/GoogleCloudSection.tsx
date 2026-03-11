@@ -6,12 +6,12 @@ import { Cpu, Container, BarChart3, Zap, Database, Brain, ArrowRight } from "luc
 import Image from "next/image";
 
 const gcpServices = [
-  { key: "compute", icon: Cpu },
-  { key: "gke", icon: Container },
-  { key: "bigquery", icon: BarChart3 },
-  { key: "cloudrun", icon: Zap },
-  { key: "storage", icon: Database },
-  { key: "aiplatform", icon: Brain },
+  { key: "compute", icon: Cpu, href: "/google-cloud/compute-engine" },
+  { key: "gke", icon: Container, href: "/google-cloud/gke" },
+  { key: "bigquery", icon: BarChart3, href: "/google-cloud/bigquery" },
+  { key: "cloudrun", icon: Zap, href: "/google-cloud/cloud-run" },
+  { key: "storage", icon: Database, href: "/google-cloud/cloud-storage" },
+  { key: "aiplatform", icon: Brain, href: "/google-cloud/ai-platform" },
 ] as const;
 
 export default function GoogleCloudSection() {
@@ -44,9 +44,10 @@ export default function GoogleCloudSection() {
 
             {/* Service cards grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
-              {gcpServices.map(({ key, icon: Icon }) => (
-                <div
+              {gcpServices.map(({ key, icon: Icon, href }) => (
+                <a
                   key={key}
+                  href={href}
                   className="group p-4 bg-light rounded-xl border border-border hover:border-gcp-blue/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="w-9 h-9 rounded-lg bg-gcp-blue/10 flex items-center justify-center mb-2 group-hover:bg-gcp-blue/20 transition-colors">
@@ -58,12 +59,12 @@ export default function GoogleCloudSection() {
                   <p className="text-text-muted text-[11px] leading-relaxed">
                     {t(`googleCloud.services.${key}.desc`)}
                   </p>
-                </div>
+                </a>
               ))}
             </div>
 
             <a
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gcp-blue text-white font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg shadow-gcp-blue/25"
             >
               {t("googleCloud.cta")}
@@ -75,7 +76,7 @@ export default function GoogleCloudSection() {
           <div className="flex-1 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/google-cloud-visual.jpg"
+                src="/images/video.jpg"
                 alt="Google Cloud Solutions"
                 width={600}
                 height={450}

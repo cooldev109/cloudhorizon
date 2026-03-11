@@ -22,66 +22,62 @@ export default function Navbar() {
 
   const gcpDropdownItems = [
     { label: t("workspace.nav"), href: "/google-workspace", highlight: true },
-    { label: t("googleCloud.services.compute.name"), href: "#google-cloud" },
-    { label: t("googleCloud.services.gke.name"), href: "#google-cloud" },
-    { label: t("googleCloud.services.bigquery.name"), href: "#google-cloud" },
-    { label: t("googleCloud.services.cloudrun.name"), href: "#google-cloud" },
-    { label: t("googleCloud.services.storage.name"), href: "#google-cloud" },
-    { label: t("googleCloud.services.aiplatform.name"), href: "#google-cloud" },
+    { label: t("googleCloud.services.compute.name"), href: "/google-cloud/compute-engine" },
+    { label: t("googleCloud.services.gke.name"), href: "/google-cloud/gke" },
+    { label: t("googleCloud.services.bigquery.name"), href: "/google-cloud/bigquery" },
+    { label: t("googleCloud.services.cloudrun.name"), href: "/google-cloud/cloud-run" },
+    { label: t("googleCloud.services.storage.name"), href: "/google-cloud/cloud-storage" },
+    { label: t("googleCloud.services.aiplatform.name"), href: "/google-cloud/ai-platform" },
   ];
 
   const awsDropdownItems = [
-    { label: t("aws.services.ec2.name"), href: "#aws" },
-    { label: t("aws.services.lambda.name"), href: "#aws" },
-    { label: t("aws.services.s3.name"), href: "#aws" },
-    { label: t("aws.services.rds.name"), href: "#aws" },
-    { label: t("aws.services.eks.name"), href: "#aws" },
-    { label: t("aws.services.sagemaker.name"), href: "#aws" },
+    { label: t("aws.services.ec2.name"), href: "/aws/ec2" },
+    { label: t("aws.services.lambda.name"), href: "/aws/lambda" },
+    { label: t("aws.services.s3.name"), href: "/aws/s3" },
+    { label: t("aws.services.rds.name"), href: "/aws/rds" },
+    { label: t("aws.services.eks.name"), href: "/aws/eks" },
+    { label: t("aws.services.sagemaker.name"), href: "/aws/sagemaker" },
   ];
 
   const cyberDropdownItems = [
-    { label: t("services.tabs.security.title"), href: "#services" },
-    { label: t("services.tabs.migration.title"), href: "#services" },
-    { label: t("services.tabs.infrastructure.title"), href: "#services" },
-    { label: t("services.tabs.devops.title"), href: "#services" },
-    { label: t("services.tabs.ai.title"), href: "#services" },
-    { label: t("services.tabs.managed.title"), href: "#services" },
+    { label: t("services.tabs.security.title"), href: "/services/cybersecurity" },
+    { label: t("services.tabs.migration.title"), href: "/services/cloud-migration" },
+    { label: t("services.tabs.infrastructure.title"), href: "/services/cloud-infrastructure" },
+    { label: t("services.tabs.devops.title"), href: "/services/devops" },
+    { label: t("services.tabs.ai.title"), href: "/services/ai-ml" },
+    { label: t("services.tabs.managed.title"), href: "/services/managed-services" },
   ];
 
   const dropdownMenus: { key: DropdownKey; label: string; href: string; items: { label: string; href: string; highlight?: boolean }[]; accent: string }[] = [
-    { key: "googleCloud", label: t("nav.googleCloud"), href: "#google-cloud", items: gcpDropdownItems, accent: "bg-gcp-blue" },
-    { key: "aws", label: t("nav.aws"), href: "#aws", items: awsDropdownItems, accent: "bg-aws-orange" },
-    { key: "cybersecurity", label: t("nav.services"), href: "#services", items: cyberDropdownItems, accent: "bg-blue" },
+    { key: "googleCloud", label: t("nav.googleCloud"), href: "/#google-cloud", items: gcpDropdownItems, accent: "bg-gcp-blue" },
+    { key: "aws", label: t("nav.aws"), href: "/#aws", items: awsDropdownItems, accent: "bg-aws-orange" },
+    { key: "cybersecurity", label: t("nav.services"), href: "/#services", items: cyberDropdownItems, accent: "bg-blue" },
   ];
 
   const simpleLinks = [
-    { label: t("nav.home"), href: "#home" },
+    { label: t("nav.home"), href: "/" },
   ];
 
   const rightLinks = [
-    { label: t("nav.partners"), href: "#partners" },
-    { label: t("nav.contact"), href: "#contact" },
+    { label: t("nav.partners"), href: "/#partners" },
+    { label: t("nav.contact"), href: "/#contact" },
   ];
 
-  const linkClass = (scrolledState: boolean) =>
-    `px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-      scrolledState
-        ? "text-navy-light hover:text-blue hover:bg-blue/5"
-        : "text-white/90 hover:text-white hover:bg-white/10"
-    }`;
+  const linkClass = () =>
+    "px-3 py-2 text-sm font-medium rounded-lg transition-colors text-navy-light hover:text-blue hover:bg-blue/5";
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-border"
-          : "bg-transparent"
+          : "bg-white/95 backdrop-blur-md"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center shrink-0">
+          <a href="/" className="flex items-center shrink-0">
             <Image
               src="/images/logo.png"
               alt="CloudsHorizon Consulting"
@@ -96,7 +92,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-0.5">
             {/* Home */}
             {simpleLinks.map((link) => (
-              <a key={link.href} href={link.href} className={linkClass(scrolled)}>
+              <a key={link.href} href={link.href} className={linkClass()}>
                 {link.label}
               </a>
             ))}
@@ -109,39 +105,41 @@ export default function Navbar() {
                 onMouseEnter={() => setOpenDropdown(menu.key)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
-                <a
-                  href={menu.href}
-                  className={`${linkClass(scrolled)} flex items-center gap-1`}
+                <button
+                  onClick={() => setOpenDropdown(openDropdown === menu.key ? null : menu.key)}
+                  className={`${linkClass()} flex items-center gap-1`}
                 >
                   {menu.label}
                   <ChevronDown size={14} className={`transition-transform duration-200 ${openDropdown === menu.key ? "rotate-180" : ""}`} />
-                </a>
+                </button>
 
                 {/* Dropdown */}
                 <div
-                  className={`absolute top-full left-0 mt-1 w-60 bg-white rounded-xl shadow-xl border border-border overflow-hidden transition-all duration-200 ${
+                  className={`absolute top-full left-0 pt-2 w-60 transition-all duration-200 ${
                     openDropdown === menu.key
                       ? "opacity-100 translate-y-0 pointer-events-auto"
                       : "opacity-0 -translate-y-2 pointer-events-none"
                   }`}
                 >
-                  {/* Accent bar at top */}
-                  <div className={`h-1 ${menu.accent}`} />
-                  <div className="py-2">
-                    {menu.items.map((item) => (
-                      <a
-                        key={item.label}
-                        href={item.href}
-                        className={`block px-4 py-2.5 text-sm transition-colors ${
-                          item.highlight
-                            ? "text-gcp-blue font-semibold hover:bg-gcp-blue/10 border-b border-border mb-1"
-                            : "text-navy-light hover:bg-blue/5 hover:text-blue"
-                        }`}
-                      >
-                        {item.label}
-                        {item.highlight && <span className="ml-1 text-[10px] text-gcp-green font-bold align-super">NEW</span>}
-                      </a>
-                    ))}
+                  <div className="bg-white rounded-xl shadow-xl border border-border overflow-hidden">
+                    {/* Accent bar at top */}
+                    <div className={`h-1 ${menu.accent}`} />
+                    <div className="py-2">
+                      {menu.items.map((item) => (
+                        <a
+                          key={item.label}
+                          href={item.href}
+                          className={`block px-4 py-2.5 text-sm transition-colors ${
+                            item.highlight
+                              ? "text-gcp-blue font-semibold hover:bg-gcp-blue/10 border-b border-border mb-1"
+                              : "text-navy-light hover:bg-blue/5 hover:text-blue"
+                          }`}
+                        >
+                          {item.label}
+                          {item.highlight && <span className="ml-1 text-[10px] text-gcp-green font-bold align-super">NEW</span>}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -149,7 +147,7 @@ export default function Navbar() {
 
             {/* Partners, Contact */}
             {rightLinks.map((link) => (
-              <a key={link.href} href={link.href} className={linkClass(scrolled)}>
+              <a key={link.href} href={link.href} className={linkClass()}>
                 {link.label}
               </a>
             ))}
@@ -159,17 +157,13 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <button
               onClick={() => setLocale(locale === "en" ? "es" : "en")}
-              className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                scrolled
-                  ? "text-navy-light hover:bg-blue/5"
-                  : "text-white/90 hover:bg-white/10"
-              }`}
+              className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg transition-colors text-navy-light hover:bg-blue/5"
             >
               <Globe size={16} />
               {locale === "en" ? "ES" : "EN"}
             </button>
             <a
-              href="#contact"
+              href="/#contact"
               className="px-5 py-2.5 bg-blue text-white text-sm font-semibold rounded-lg hover:bg-blue-light transition-colors shadow-lg shadow-blue/25"
             >
               {t("nav.getQuote")}
@@ -180,13 +174,13 @@ export default function Navbar() {
           <div className="lg:hidden flex items-center gap-2">
             <button
               onClick={() => setLocale(locale === "en" ? "es" : "en")}
-              className={`p-2 rounded-lg ${scrolled ? "text-navy" : "text-white"}`}
+              className="p-2 rounded-lg text-navy"
             >
               <Globe size={20} />
             </button>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`p-2 rounded-lg ${scrolled ? "text-navy" : "text-white"}`}
+              className="p-2 rounded-lg text-navy"
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -205,7 +199,7 @@ export default function Navbar() {
         <div className="p-6 space-y-1">
           {/* Home */}
           <a
-            href="#home"
+            href="/"
             className="block px-4 py-3 text-lg font-medium text-navy-light hover:bg-blue/5 rounded-lg transition-colors"
             onClick={() => setMobileOpen(false)}
           >
@@ -261,7 +255,7 @@ export default function Navbar() {
           {/* CTA */}
           <div className="pt-4 border-t border-border mt-4">
             <a
-              href="#contact"
+              href="/#contact"
               className="block w-full text-center px-5 py-3 bg-blue text-white font-semibold rounded-lg hover:bg-blue-light transition-colors"
               onClick={() => setMobileOpen(false)}
             >

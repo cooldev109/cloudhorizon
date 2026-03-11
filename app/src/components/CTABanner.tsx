@@ -25,7 +25,7 @@ export default function CTABanner() {
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a
-            href="#contact"
+            href="/#contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue font-bold rounded-xl hover:bg-white/90 transition-all shadow-xl hover:-translate-y-0.5"
           >
             {t("cta.button1")}

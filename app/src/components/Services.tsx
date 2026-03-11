@@ -34,6 +34,15 @@ const tabImages = {
   managed: "/images/monitoring-dashboard.jpg",
 };
 
+const tabLinks = {
+  migration: "/services/cloud-migration",
+  infrastructure: "/services/cloud-infrastructure",
+  devops: "/services/devops",
+  security: "/services/cybersecurity",
+  ai: "/services/ai-ml",
+  managed: "/services/managed-services",
+};
+
 const tabColors = {
   migration: "from-blue/10 to-teal/10 border-blue",
   infrastructure: "from-teal/10 to-green/10 border-teal",
@@ -128,7 +137,7 @@ export default function Services() {
                 {t(`services.tabs.${activeTab}.description`)}
               </p>
               <a
-                href="#contact"
+                href={tabLinks[activeTab]}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white font-semibold rounded-xl hover:bg-navy-light transition-colors"
               >
                 {t(`services.tabs.${activeTab}.cta`)}

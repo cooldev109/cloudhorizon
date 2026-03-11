@@ -15,11 +15,11 @@ export default function Hero() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover mix-blend-screen opacity-60"
+          className="absolute inset-0 w-full h-full object-cover mix-blend-screen opacity-100"
         >
           <source src="/videos/pixelbin-video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/40 to-transparent" />
       </div>
 
       {/* Animated grid overlay */}
@@ -58,14 +58,14 @@ export default function Hero() {
           {/* CTAs */}
           <div className="flex flex-wrap gap-4 animate-fade-in-up opacity-0 delay-400">
             <a
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-blue text-white font-semibold rounded-xl hover:bg-blue-light transition-all shadow-lg shadow-blue/30 hover:shadow-xl hover:shadow-blue/40 hover:-translate-y-0.5"
             >
               {t("hero.cta1")}
               <ArrowRight size={18} />
             </a>
             <a
-              href="#services"
+              href="/#services"
               className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all hover:-translate-y-0.5"
             >
               {t("hero.cta2")}

@@ -6,12 +6,12 @@ import { Server, Code, HardDrive, Database, Container, Brain, ArrowRight } from 
 import Image from "next/image";
 
 const awsServices = [
-  { key: "ec2", icon: Server },
-  { key: "lambda", icon: Code },
-  { key: "s3", icon: HardDrive },
-  { key: "rds", icon: Database },
-  { key: "eks", icon: Container },
-  { key: "sagemaker", icon: Brain },
+  { key: "ec2", icon: Server, href: "/aws/ec2" },
+  { key: "lambda", icon: Code, href: "/aws/lambda" },
+  { key: "s3", icon: HardDrive, href: "/aws/s3" },
+  { key: "rds", icon: Database, href: "/aws/rds" },
+  { key: "eks", icon: Container, href: "/aws/eks" },
+  { key: "sagemaker", icon: Brain, href: "/aws/sagemaker" },
 ] as const;
 
 export default function AWSSection() {
@@ -31,7 +31,7 @@ export default function AWSSection() {
           <div className="flex-1 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/aws-visual.jpg"
+                src="/images/awswhole.jpg"
                 alt="AWS Solutions"
                 width={600}
                 height={450}
@@ -72,9 +72,10 @@ export default function AWSSection() {
 
             {/* Service cards grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
-              {awsServices.map(({ key, icon: Icon }) => (
-                <div
+              {awsServices.map(({ key, icon: Icon, href }) => (
+                <a
                   key={key}
+                  href={href}
                   className="group p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-aws-orange/30 hover:bg-white/10 hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="w-9 h-9 rounded-lg bg-aws-orange/20 flex items-center justify-center mb-2 group-hover:bg-aws-orange/30 transition-colors">
@@ -86,12 +87,12 @@ export default function AWSSection() {
                   <p className="text-white/60 text-[11px] leading-relaxed">
                     {t(`aws.services.${key}.desc`)}
                   </p>
-                </div>
+                </a>
               ))}
             </div>
 
             <a
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center gap-2 px-6 py-3 bg-aws-orange text-navy font-semibold rounded-xl hover:opacity-90 transition-all shadow-lg shadow-aws-orange/25"
             >
               {t("aws.cta")}

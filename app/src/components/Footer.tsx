@@ -8,6 +8,14 @@ export default function Footer() {
   const { t } = useI18n();
 
   const serviceKeys = ["migration", "infrastructure", "devops", "security", "ai", "managed"] as const;
+  const serviceLinks: Record<string, string> = {
+    migration: "/services/cloud-migration",
+    infrastructure: "/services/cloud-infrastructure",
+    devops: "/services/devops",
+    security: "/services/cybersecurity",
+    ai: "/services/ai-ml",
+    managed: "/services/managed-services",
+  };
   const companyKeys = ["about", "partners", "contact", "careers"] as const;
 
   return (
@@ -53,7 +61,7 @@ export default function Footer() {
               {serviceKeys.map((key) => (
                 <li key={key}>
                   <a
-                    href="#services"
+                    href={serviceLinks[key]}
                     className="text-white/60 text-sm hover:text-white transition-colors"
                   >
                     {t(`footer.services.${key}`)}
@@ -70,7 +78,7 @@ export default function Footer() {
               {companyKeys.map((key) => (
                 <li key={key}>
                   <a
-                    href={`#${key === "about" ? "home" : key}`}
+                    href={`/#${key === "about" ? "home" : key}`}
                     className="text-white/60 text-sm hover:text-white transition-colors"
                   >
                     {t(`footer.company.${key}`)}
@@ -90,7 +98,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/573216363814" target="_blank" rel="noopener noreferrer" className="text-white/60 text-sm hover:text-white transition-colors">
+                <a href="https://wa.me/31629485030" target="_blank" rel="noopener noreferrer" className="text-white/60 text-sm hover:text-white transition-colors">
                   WhatsApp: {t("contact.info.whatsapp")}
                 </a>
               </li>
